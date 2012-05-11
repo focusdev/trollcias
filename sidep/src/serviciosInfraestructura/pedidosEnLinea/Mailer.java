@@ -1,17 +1,16 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package serviciosInfraestructura.pedidosEnLinea;
 
+import java.io.UnsupportedEncodingException;
 import java.net.PasswordAuthentication;
 import java.util.Properties;
-import javax.mail.Authenticator;
-import javax.mail.Session;
+import javax.mail.*;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 
 /**
- *
- * @author Rafuru
+ * Cliente de Correo del Sistema
+ * @author Focus Development
  */
 public class Mailer {
     private StringBuilder texto;
@@ -22,13 +21,51 @@ public class Mailer {
     private final String pswd="focus@66";
     
     private Session sesion;
-
+    
+    /**
+     * Inicializa el servicio de Correo con los datos del mensaje a enviar
+     * @param texto Cuerpo del Mensaje
+     * @param para  Destinatario
+     * @param titulo Titulo del Mensaje
+     */
     public Mailer(StringBuilder texto, String para, String titulo) {
         this.texto = texto;
         this.para = para;
         this.titulo = titulo;
+        iniciaServicio();
     }
     
+    /**
+     * Envia el Correo al recipiente
+     * @return Resultado de la operacion
+     */
+    public String enviaCorreo(){
+        if (sesion==null)
+            return "Servicio no Iniciado";
+        try{
+            Message message =new MimeMessage(sesion);
+            message.setFrom(new InternetAddress(user,"Sistema de Pedidos SIDEP"));
+            message.setRecipient(Message.RecipientType.TO,
+                    new InternetAddress(para));
+            message.setSubject(titulo);
+            message.setText(texto.toString());
+            Transport t =sesion.getTransport("smtp");
+            t.connect(user, pswd);
+            t.sendMessage(message,message.getAllRecipients());
+            System.out.println("Enviado");
+            t.close();
+            return "Mensaje Enviado con Éxito";
+        }catch(MessagingException e){
+            System.out.println(e.getMessage());
+            return "Error al Enviar el Mensaje";
+        }catch(UnsupportedEncodingException uee){
+            return "Error al Enviar el Mensaje";
+        }
+    }
+    
+    /**
+     * Inicializa el servicio del cliente de correo
+     */
     private void iniciaServicio(){
         Properties props=new Properties();
         props.put("mail.smtp.host","smtp.gmail.com");
@@ -43,4 +80,5 @@ public class Mailer {
         };
         sesion = Session.getDefaultInstance(props, auth);
     }
+    
 }
