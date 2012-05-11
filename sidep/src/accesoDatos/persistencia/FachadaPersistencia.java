@@ -4,10 +4,20 @@
  */
 package accesoDatos.persistencia;
 
+import accesoDatos.IPersistencia;
+import negocios.objetosNegocio.*;
+
+
 /**
  *
  * @author Rafuru
  */
-public class FachadaPersistencia {
+public class FachadaPersistencia implements IPersistencia{
+    public FachadaPersistencia(){
+    }
+    
+    public Pedido getListaPedido(){
+        return null; 
+    }
     
 }

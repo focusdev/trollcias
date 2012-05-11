@@ -4,10 +4,24 @@
  */
 package accesoDatos.datos;
 
+import accesoDatos.persistencia.Persistencia;
+import negocios.objetosNegocio.Pedido;
+
 /**
  *
- * @author Rafuru
+ * @author Focus Dev 
  */
-public class DatosPedido {
+public class DatosPedido extends Persistencia{
+    
+    public DatosPedido(){
+    } 
+    public Pedido getListaPedido(){
+        return null;   
+    }
+    
+    public void listaPedidos(){
+        
+    }
+    
     
 }

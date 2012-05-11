@@ -2,7 +2,9 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package accesoDatos.persistencia;
+package accesoDatos;
+
+import negocios.objetosNegocio.Pedido;
 
 /**
  *
@@ -10,4 +12,5 @@ package accesoDatos.persistencia;
  */
 public interface IPersistencia {
     
+    public Pedido getListaPedido();
 }
