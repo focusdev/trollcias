@@ -3,21 +3,15 @@
  * and open the template in the editor.
  */
 package negocios;
-<<<<<<< HEAD
 import interfacesGenerales.IFachadaNegocios;
-=======
- import interfacesGenerales.IFachadaNegocios;
->>>>>>> Rafael
+import interfacesGenerales.IFachadaNegocios;
 /**
  *
  * 
  * @author Rafuru
  * 
  */
-<<<<<<< HEAD
+
 public class fachadaNegocios implements IFachadaNegocios{
     
-=======
-public class fachadaNegocios implements IFachadaNegocios {
->>>>>>> Rafael
 }
