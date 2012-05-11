@@ -4,10 +4,24 @@
  */
 package negocios.SuS_AdministrarPedidos;
 
+import negocios.objetosNegocio.Pedido;
+
 /**
  *
  * @author Rafuru
  */
-public class FachadaAdministrarPedidos {
+public class FachadaAdministrarPedidos implements IAdministrarPedidos{
+    
+    public FachadaAdministrarPedidos(){
+        
+    }
+    
+    public Pedido obtenerListaPedidos(){
+        return null;
+    }
+    
+    public boolean enviarPedido(){
+        return true;
+    }
     
 }

@@ -3,12 +3,13 @@
  * and open the template in the editor.
  */
 package negocios;
-
+import interfacesGenerales.IFachadaNegocios;
 /**
  *
+ * 
  * @author Rafuru
  * 
  */
-public class fachadaNegocios {
-    //TODO: todo :D
+public class fachadaNegocios implements IFachadaNegocios{
+    
 }
