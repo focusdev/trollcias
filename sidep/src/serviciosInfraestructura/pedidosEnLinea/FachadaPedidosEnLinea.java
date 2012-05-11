@@ -4,6 +4,8 @@
  */
 package serviciosInfraestructura.pedidosEnLinea;
 
+import serviciosInfraestructura.IPedidosEnLinea;
+
 
 /**
  *
