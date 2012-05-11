@@ -4,10 +4,13 @@
  */
 package accesoDatos;
 
+import accesoDatos.persistencia.FachadaPersistencia;
+
+
 /**
  *
  * @author Rafuru
  */
 public class FachadaDatos {
-    
-}
+    FachadaPersistencia test=new FachadaPersistencia();
+            }

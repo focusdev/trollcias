@@ -2,12 +2,12 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package accesoDatos.persistencia;
+package serviciosInfraestructura.pedidosEnLinea;
 
 /**
  *
  * @author Rafuru
  */
-public interface IPersistencia {
-    
+public interface IPedidosEnLinea {
+    public void enviarPedidos(String[] datosPedido);
 }
