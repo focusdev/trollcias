@@ -5,6 +5,7 @@
 package negocios.objetosNegocio;
 
 /**
+<<<<<<< HEAD
  * Clase que permite la crear y editar los atributos
  * de un objeto que representa libros.
  * 
@@ -172,4 +173,11 @@ public class Libro {
         return "Libro{" + "idLibro=" + idLibro + ", tituloLibro=" + tituloLibro + ", proveedor=" + proveedor + ", autor=" + autor + ", costo=" + costo + ", ISBN=" + ISBN + '}';
     }
     
+=======
+ *
+ * @author Focus Dev
+ */
+public class Libro {
+    public Libro (String test){}
+>>>>>>> Rafael
 }
