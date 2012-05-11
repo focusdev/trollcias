@@ -6,8 +6,8 @@ package negocios.objetosNegocio;
 
 /**
  *
- * @author rafael
+ * @author Focus Dev
  */
 public class Libro {
-    
+    public Libro (String test){}
 }
